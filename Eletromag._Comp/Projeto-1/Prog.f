@@ -48,7 +48,6 @@
 		dif = soma
 		
 		write(1,*) ""
-		write(1,*) ""
 
 		v = v_f
 
