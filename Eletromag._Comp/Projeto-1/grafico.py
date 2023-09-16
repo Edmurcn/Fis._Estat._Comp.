@@ -22,7 +22,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 z = coord[:,2]
 
-scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="inferno", s=10)
+scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="inferno", s=20)
 
 cbar = fig.colorbar(scatter, location="left")
 cbar.set_label("Potencial V(x,y)")

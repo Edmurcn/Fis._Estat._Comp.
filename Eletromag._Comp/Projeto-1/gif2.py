@@ -43,7 +43,7 @@ for line in lines:
 
 # Criar um GIF a partir dos quadros gerados
 
-with imageio.get_writer('evolucao_potencial.gif', mode='I', duration=0.5, loop=0) as writer:
+with imageio.get_writer('evolucao_potencial.gif', mode='I', duration=0.15, loop=0) as writer:
     for frame in frames:
         image = imageio.imread(frame)
         writer.append_data(image)
