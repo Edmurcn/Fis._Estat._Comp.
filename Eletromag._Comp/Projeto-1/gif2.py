@@ -24,7 +24,7 @@ for line in lines:
         fig = plt.figure(figsize=(6,6))
         ax = fig.add_subplot(111, projection='3d')
         z = coord[:,2]
-        scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="inferno", s=10)
+        scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="jet", s=10)
         cbar = fig.colorbar(scatter, location="left")
         cbar.set_label("Potencial V(x,y)")
         plt.title("Potencial Final")

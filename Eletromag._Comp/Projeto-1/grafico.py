@@ -5,7 +5,7 @@ import numpy as np
 
 coord = []
 
-with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto-1/dados.dat', 'r') as arquivo:
+with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto-1/dados1.dat', 'r') as arquivo:
     for linha in arquivo:
         partes = linha.strip().split()  # Divide a linha em partes
         if len(partes) == 3:
@@ -22,7 +22,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 z = coord[:,2]
 
-scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="inferno", s=20)
+scatter = ax.scatter(coord[:, 0], coord[:, 1], coord[:, 2], c=z, cmap="jet", s=20)
 
 cbar = fig.colorbar(scatter, location="left")
 cbar.set_label("Potencial V(x,y)")
