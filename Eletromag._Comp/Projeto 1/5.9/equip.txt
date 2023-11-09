@@ -1,0 +1,9 @@
+set term pngcairo size 800,600
+set output "equip.png"
+set xlabel 'x'
+set ylabel 'y' 
+set xrange [-1:1] 
+set yrange [-1:1] 
+set grid 
+set size ratio -1 
+plot 'fort.10' using 1:2 with points ps 0.5 pointtype 7 lc rgb 'black' notitle 

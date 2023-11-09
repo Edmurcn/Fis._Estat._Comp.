@@ -1,0 +1,18 @@
+set terminal gif animate 
+set output "campo2.gif"
+set title "Variação do Campo" font "Verdana,20" 
+stats 'fort.3' name "A" nooutput
+set xrange[-50:50]
+set yrange[-50:50]
+set size ratio 1
+set tics out
+set tics nomirror
+set palette rgb 33,13,10
+
+total_frames = 100
+frame_interval = 20
+
+do for [i=0:(A_blocks)]{
+  plot "fort.3" index i with image, "fort.3" index i using 1:2:($4*100):($5*100) every 15:15 with vectors lc -1 filled notitle
+  pause frame_interval
+}	

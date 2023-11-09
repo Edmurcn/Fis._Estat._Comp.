@@ -1,0 +1,9 @@
+set term pngcairo size 800,600
+set output "equip.png"
+set xlabel 'x'
+set ylabel 'y' 
+set xrange [-51:51] 
+set yrange [-51:51] 
+set grid 
+set size ratio -1 
+plot 'equip.dat' using 1:2 with points ps 1.5 pointtype 7 lc rgb 'black' notitle 

@@ -1,0 +1,9 @@
+set term pngcairo size 800,600
+set output "grafico.png"
+set xrange[-1:1]
+set yrange[-1:1]
+set size ratio 1
+set tics out
+set tics nomirror
+plot "campo.dat" with image, "campo.dat" using 1:2:($4*20):($5*20) with vectors lc -1 filled notitle
+
