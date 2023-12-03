@@ -1,0 +1,13 @@
+set terminal gif animate
+set output "6.4.gif"
+set yrange [-1.1:1.1]
+set xrange [0:1] 
+set title "Pulso de Guitarra - Pontas Fixas" font "Verdana,20"
+set ylabel "Amplitude"
+set xlabel "Comprimento"
+set style line 1 lc rgb "blue" lw 2
+stats 'data_out' name "A" nooutput
+
+do for [i=0:(A_blocks)]{
+	plot 'data_out' index i w linespoints lt rgb "blue" pt 7 notitle
+}
