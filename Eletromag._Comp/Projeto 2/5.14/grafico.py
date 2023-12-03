@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 coord = []
 campo = []
 
-with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto 2/5.15/esp_out.dat', 'r') as arquivo:
+with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto 2/5.14/esp_out.dat', 'r') as arquivo:
     
     for linha in arquivo:
         partes = linha.strip().split()  # Divide a linha em partes
@@ -40,7 +40,7 @@ u = campo[:, 0]  # Componente Bx
 v = campo[:, 1]  # Componente By    
 w = campo[:, 2]  # Componente Bz
 
-ax.quiver(x, y, z, u, v, w, length=0.8, normalize=False)  # Plota vetores do campo magnético
+ax.quiver(x, y, z, u, v, w, length=0.5, normalize=False)  # Plota vetores do campo magnético
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
