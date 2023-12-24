@@ -5,7 +5,7 @@ import numpy as np
 
 coord = []
 
-with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto 1', 'r') as arquivo:
+with open('/home/edmurcn/Documentos/MeusProjetos/Fis._Estat._Comp./Eletromag._Comp/Projeto 1/5.9/dados.dat', 'r') as arquivo:
     for linha in arquivo:
         partes = linha.strip().split()  # Divide a linha em partes
         if len(partes) == 3:
